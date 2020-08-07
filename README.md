@@ -6,6 +6,9 @@
 - 用户管理
 - 文章评论
 
+> 详细文档可以访问我的博客 
+> [QiJieH's Blog](https://qijieh.github.io/blog/blogs/FrontEnd/2020-8/%5B项目实战%5D多人博客管理系统.html)
+
 
 ### 首页
 
