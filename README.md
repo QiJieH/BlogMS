@@ -6,42 +6,22 @@
 - 用户管理
 - 文章评论
 
-### 关于本项目
-
-![](https://gitee.com/QiJieH/blog-image-bed/raw/master//20200807140209.png)
-
 
 ### 首页
 
-![](https://gitee.com/QiJieH/blog-image-bed/raw/master//20200807135643.png)
+![](![](https://i.loli.net/2020/08/07/o3YrjK1gZlhs74e.png))
 
 
 ### 文章页
 
-![](https://gitee.com/QiJieH/blog-image-bed/raw/master//20200807135728.png)
+![](https://i.loli.net/2020/08/07/IASwVrNeqoE6KCa.png)
 
 
 ### 用户管理
 
-![](https://gitee.com/QiJieH/blog-image-bed/raw/master//20200807135832.png)
-
-![](https://gitee.com/QiJieH/blog-image-bed/raw/master//20200807135858.png)
+![](https://i.loli.net/2020/08/07/AxdSEKN6kg8Q5si.png)
 
 
 ### 文章管理
 
-![](https://gitee.com/QiJieH/blog-image-bed/raw/master//20200807135925.png)
-
-![](https://gitee.com/QiJieH/blog-image-bed/raw/master//20200807135938.png)
-
-
-### 登录注册
-
-![](https://gitee.com/QiJieH/blog-image-bed/raw/master//20200807140039.png)
-
-![](https://gitee.com/QiJieH/blog-image-bed/raw/master//20200807140053.png)
-
-
-### 文章评论
-
-![](https://gitee.com/QiJieH/blog-image-bed/raw/master//20200807140139.png)
+![](https://i.loli.net/2020/08/07/aqegQXNLhJSEYPc.png)
