@@ -1,5 +1,5 @@
 **这是个人的练手项目**
-使用 Node.js + MongoDB + Bootstrap 搭建的带后端的简单文章/博客管理系统
+使用 Node.js + MongoDB + Express + Bootstrap 搭建的带后端的简单文章/博客管理系统
 
 - 登录注册
 - 文章管理
