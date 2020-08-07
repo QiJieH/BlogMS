@@ -1,0 +1,51 @@
+body{
+    background-color: #eeeeee;
+}
+
+.main{
+    background-color: white;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+
+.article-content{
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+.comment{
+    margin-top: 100px;
+}
+
+
+.comment-list{
+    margin-top: 25px;
+}
+
+.comment-card{
+    margin-top: 15px;
+}
+
+.c-username{
+    color: #6d757a;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.comment-content{
+    color: #222222;
+    font-size: 14px;
+}
+
+.citem{
+    color: #99a2aa;
+    font-size: small;
+}

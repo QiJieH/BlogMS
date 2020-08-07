@@ -1,0 +1,55 @@
+{{extend './common/layout.html'}}
+
+
+{{block 'link'}}
+<link rel="stylesheet" href="/home/css/index.css">
+{{/block}}
+
+{{block 'main'}}
+{{include './common/header.html'}}
+<!-- content -->
+<div class="container">
+    <div class="container main">
+    <div class="jumbotron" style="background-color: white;">
+        <h1>这是一个开源的博客项目网站</h1>
+        <p>使用了 node.js + express + mongodb + bootstrap 进行搭建</p>
+        <p>Develope by QiJieH</p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="https://github.com/QiJieH" role="button">
+                <img style="width: 25px;height: 25px;" src="/home/image/github-outline.svg">
+                github
+            </a>
+        </p>
+        <p>&nbsp;</p>
+        <p>
+            <strong>后台管理展示</strong>
+        </p>
+        <p>
+            <small>用户管理</small><br>
+            <img style="width: 920px; border: solid 1px dodgerblue;" src="/home/image/user-list.png" alt="">
+        </p>
+        <p>
+            <small>文章管理</small><br>
+            <img style="width: 920px; border: solid 1px dodgerblue;" src="/home/image/articles-list.png" alt="">
+        </p>
+        <p>
+            <small>添加文章</small><br>
+            <img style="width: 920px; border: solid 1px dodgerblue;" src="/home/image/article-edit.png" alt="">
+        </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <div class="alert alert-info" role="alert">
+            <strong>声明：</strong>
+            本项目仅用于学习交流，严禁商用；
+            如果有如何内容侵犯了您的权力，请联系
+            <a href="https://github.com/QiJieH" class="alert-link">网站管理员</a>
+            删除
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+{{/block}}

@@ -1,0 +1,76 @@
+{{extend './common/layout.html'}}
+{{block 'title'}}
+<title>Blog articleedit</title>
+{{/block}}
+
+
+
+{{block 'main'}}
+
+{{include './common/header.html'}}
+
+<div id="content" class="container">
+
+    {{include './common/aside.html'}}
+
+    <div class="panel panel-default pull-left data-panel">
+        <div class="panel-heading">文章信息</div>
+        <div class="panel-body">
+            <!-- <div class="alert alert-warning alert-dismissible" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div> -->
+            <!-- enctype 指定表单数据的编码格式
+                application/x-www-form-urlencode
+                    name=zhangsan&age=20
+                multipart/form-data 将表单数据编码成二进制类型
+            -->
+            <form class="form-container" action="/admin/article-add" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="InputTitle">标题</label>
+                    <input name="title" type="text"" class="form-control" id="InputTitle" placeholder="请输入标题4-26字符">
+                </div>
+                <div class="form-group">
+                    <label for="InputAuthor">作者</label>
+                    <input name="author" type="text" class="form-control" id="InputAuthor" readonly value="{{userInfo.username}}">
+                </div>
+                <div class="form-group">
+                    <label for="InputDate">时间</label>
+                    <input name="publishDate" type="date" class="form-control" id="InputDate">
+                </div>
+                <div class="form-group">
+                    <label for="InputCover">文章封面</label>
+                    <!-- multiple -->
+                    <input type="file" name="cover" id="InputCover">
+                    <div class="thumbnail-waper">
+                        <img class="img-thumbnail" src="" alt="" id="preview">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="InputContent">内容</label>
+                    <textarea class="form-control" name="content" id="editor" cols="30" rows="10" placeholder="请输入文章内容"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">发布</button>
+            </form>
+        </div>
+    </div>
+
+{{/block}}
+
+{{block 'script'}}
+    <script>
+        var file = document.querySelector('#InputCover');
+        var preview = document.querySelector('#preview');
+        file.onchange = function(){
+            var reader = new FileReader();
+            // readAsDataURL 异步方法无法直接获取结果
+            reader.readAsDataURL(this.files[0]);
+            // 当 onload 被触发时说明读取成功
+            reader.onload = function(){
+                preview.src = reader.result;
+            }
+        }
+    </script>
+{{/block}}

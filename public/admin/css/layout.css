@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#content{
+
+}
+
+.aside{
+    width: 20%;
+    margin-right: 2%;
+}
+
+.data-panel{
+    width: 78%;
+}

@@ -1,0 +1,79 @@
+{{extend './common/layout.html'}}
+{{block 'title'}}
+<title>Blog useredit</title>
+{{/block}}
+
+
+{{block 'main'}}
+
+
+<!-- Navbar bar -->
+{{include './common/header.html'}}
+<!-- Content -->
+<div id="content" class="container">
+    <!-- Aside -->
+    {{include './common/aside.html'}}
+    <!-- Data panel -->
+    <div class="panel panel-default pull-left data-panel">
+        <!-- Panel title -->
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 style="line-height: 30px;" class="panel-title">
+                用户信息
+                <a style=" visibility: {{user ? 'show' : 'hidden'}}; ;float: right;color:white"
+                    class="btn btn-danger btn-sm" href="/admin/user-delete?id={{ user && user.id}}" role="button">
+                    删除用户
+                </a>
+            </h4>
+        </div>
+        <!-- Panel body -->
+        <div class="panel-body">
+            {{if warning}}
+            <div class="alert alert-warning alert-dismissible" role="alert">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            {{warning}}
+            </div>
+            {{/if}}
+            <form class="form-container" action="{{link}}" method="POST">
+                <div class="form-group">
+                    <label for="InputUserName">用户名</label>
+                    <input value="{{user && user.username}}" name="username" type="text" class="form-control"
+                        id="InputUserName" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">邮箱</label>
+                    <input value="{{user && user.email}}" name="email" type="email" class="form-control" id="InputEmail"
+                        placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="InputPassword">密码</label>
+                    <!-- {{user ? 'disabled' : ''}} -->
+                    <input value="" name="password" type="password" class="form-control" id="InputPassword"
+                        placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label>权限</label>
+                    <select name="role" class="form-control">
+                        <option value="normal" {{ user && user.role=='normal' ? 'selected' : '' }}>普通用户</option>
+                        <option value="admin" {{ user && user.role=='admin' ? 'selected' : '' }}>管理员</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>状态</label>
+                    <select name="state" class="form-control">
+                        <option value="0" {{user && user.state == 0 ? 'selected' : ''}}>启用</option>
+                        <option value="1" {{user && user.state == 1 ? 'selected' : ''}}>禁用</option>
+                    </select>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">{{button}}</button>
+                <a class="btn btn-default" href="/admin/user" role="button">返回</a>
+            </form>
+        </div>
+
+    </div>
+
+    {{/block}}

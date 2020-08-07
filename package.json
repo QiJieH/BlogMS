@@ -1,0 +1,12 @@
+{
+  "name": "BlogMS",
+  "version": "1.0.0",
+  "description": "使用 node.js + Express + MongoDB 构建的轻量级博客管理系统",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "QiJieH",
+  "license": "ISC"
+}

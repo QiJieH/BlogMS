@@ -1,0 +1,61 @@
+{{extend './common/layout.html'}}
+
+
+{{block 'link'}}
+    <link rel="stylesheet" href="/home/css/article.css">
+{{/block}}
+
+{{block 'main'}}
+    {{include './common/header.html'}}
+    <div class="container main">
+        <div class="article-header">
+            <h2>
+                {{article.title}}
+            </h2>
+            <div class="article-info">
+                <h5 class="text-primary">
+                    {{article.author.username}}
+                    <small> 
+                        {{dateFormat(article.publishDate, 'yyyy-mm-dd')}}
+                    </small>
+                </h5>
+            </div>
+        </div>
+        <div class="article-content">
+            {{@article.content}}
+        </div>
+
+        <div class="comment">
+            {{if userInfo}}
+            <label>评论</label>
+            <form class="comment-form" action="/home/comment" method="POST">
+                <div class="form-group">
+                    <textarea name="content" placeholder="有什么想说的吗？留下你的足迹吧" class="form-control comment-input" rows="3"></textarea>
+                    <input type="hidden" name="uid" value="{{@userInfo._id}}">
+                    <input type="hidden" name="aid" value="{{@article._id}}">
+                </div>
+                <button type="submit" class="btn btn-info btn-sm">发表评论</button>
+            </form>
+            {{else}}
+            <label>未登录，无法评论</label>
+            {{/if}}
+
+
+            <div class="comment-list">
+                {{each comments}}
+                <div class="comment-card">
+                    <div class="comment-info">
+                        <span class="c-username">{{$value.uid.username}}</span>
+                        <div class="comment-content">
+                            {{$value.content}}
+                        </div>
+                        <span class="citem c-time">{{dateFormat($value.time, 'yyyy-mm-dd')}}</span>
+                        <span class="citem c-email">&nbsp;&nbsp;{{$value.uid.email}}</span>
+                    </div>
+                    
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+{{/block}}
